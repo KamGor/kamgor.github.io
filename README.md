@@ -1,0 +1,2 @@
+# kamgor.github.io
+Blog
