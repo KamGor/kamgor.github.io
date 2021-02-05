@@ -20,9 +20,9 @@ jobs:
       - name: Dependencies installation
         run: |
           npm install
-      - name: Build & Deploy
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
-        with:
-          build_configuration: production
-          base_href: /
-          deploy_branch: gh-pages
+      - name: App build
+        run: |
+          ng build --prod
+      - name: Deployment
+        run: |
+          ng deploy --no-build --base-href=/
