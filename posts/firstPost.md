@@ -1,3 +1,3 @@
-### First post
+# First post
 
 Hello!
