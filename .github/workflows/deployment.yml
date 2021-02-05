@@ -17,7 +17,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Build
+      - name: Dependencies installation
         run: |
           npm install
-          npm run build --prod
+      - name: Build & Deploy
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@1
+        with:
+          build_configuration: prod
+          base_href: /
+          deploy_branch: gh-pages
