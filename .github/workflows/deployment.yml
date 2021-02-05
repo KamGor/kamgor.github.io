@@ -22,7 +22,7 @@ jobs:
           npm install
       - name: App build
         run: |
-          ng build --prod
+          npm run build:prod
       - name: Deployment
         run: |
-          ng deploy --no-build --base-href=/
+          npm run deploy
