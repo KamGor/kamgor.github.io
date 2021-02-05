@@ -4,5 +4,6 @@ export const environment = {
   username: 'kamgor',
   postsRepositoryName: '',
   postsBranch: '',
+  aboutRepositoryName: '',
   repositoryUrl: 'https://github.com/KamGor/kamgor.github.io',
 };
