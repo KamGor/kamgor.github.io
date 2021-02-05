@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  githubApiUrl: 'https://api.github.com',
+  username: 'kamgor',
+  postsRepositoryName: 'kamgor.github.io',
+  postsBranch: 'posts',
+  aboutRepositoryName: 'kamgor',
+  repositoryUrl: 'https://github.com/KamGor/kamgor.github.io',
 };
 
 /*

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" class="sticky-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+        KamGor Blog
+    </span>
+    <span class="spacer"></span>
+    <a mat-icon-button href="{{repositoryUrl}}">
+        <mat-icon>code</mat-icon>
+    </a>
+    <button mat-icon-button (click)="getAbout()">
+        <mat-icon>info_outline</mat-icon>
+    </button>
+</mat-toolbar>
+<div class="shadow mat-elevation-z24"></div>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav class="sidenav" opened="true">
+        <mat-nav-list>
+            <a mat-list-item *ngFor="let nav of postList" (click)="changeEntry(nav.name)">{{nav.name}}</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [innerHTML]="entry">
+    </mat-sidenav-content>
+</mat-sidenav-container>

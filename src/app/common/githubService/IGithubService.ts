@@ -1,6 +1,7 @@
+import { IContentResponse } from "./IContentResponse";
 import { IPost } from "./IPost";
 
 export interface IGithubService
 {
-    getPosts(): Promise<IPost[]>;
+    getContents(username: string, repositoryName: string, fileName: string, ref?: string): Promise<IContentResponse[]>;
 }
