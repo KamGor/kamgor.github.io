@@ -25,4 +25,6 @@ jobs:
           npm run build:prod
       - name: Deployment
         run: |
-          npm run deploy
+          npm run deploy -- --repo=https://github.com/${{ env.GITHUB_REPOSITORY }}.git --name="${{ secrets.NAME }}" --email=${{ secrets.EMAIL }} --no-silent
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
